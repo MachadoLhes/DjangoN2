@@ -13,7 +13,13 @@ Esta aplicação pode rodar em um container Docker, para fazê-lo, temos duas op
 
 ## 1 - Rodando a imagem diretamente do DockerHub
 
-A imagem desta aplicação está disponível no [DockerHub](https://hub.docker.com/r/machadolhes/django_n2), para executá-la, rode o seguinte comando:
+A imagem desta aplicação está disponível no [DockerHub](https://hub.docker.com/r/machadolhes/django_n2), faça o download com o comando:
+
+```shell
+$ docker pull machadolhes/django_n2
+```
+
+Para executá-la, rode o seguinte comando:
 
 ```shell
 $ docker run -p 8000:80 machadolhes/django_n2:latest
