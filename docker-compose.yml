@@ -2,6 +2,7 @@ version: '3'
 
 services:
   web:
+    image: machadolhes/django_n2
     build: .
     command: python manage.py runserver 0.0.0.0:80
     volumes:
