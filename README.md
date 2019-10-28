@@ -7,6 +7,56 @@ A aplicação utiliza a versão LTS *(Long Term Suport)* mais recente do Django 
 
 ---
 
+## Rodando a aplicação com Docker
+
+Esta aplicação pode rodar em um container Docker, para fazê-lo, temos duas opções:
+
+## 1 - Rodando a imagem diretamente do DockerHub
+
+A imagem desta aplicação está disponível no [DockerHub](https://hub.docker.com/r/machadolhes/django_n2), para executá-la, rode o seguinte comando:
+
+```shell
+$ docker run -p 8000:80 machadolhes/django_n2:latest
+```
+
+> **Observação:** A aplicação está sendo executada na `porta 80` do container, então estamos mapeando a `porta 8000` do host para a porta correspondente no container
+
+A aplicação estará disponível em [`localhost:8000`](localhost:8000)
+
+## 2 - Construindo localmente a imagem
+
+Este repositório possui um arquivo `docker-compose`, isso facilitará o processo, caso queira construir a imagem localmente. Para isso, é primeiramente necessário possua o `docker-compose` instalado em sua máquina. 
+
+### 2.1 - Instalando o docker-compose
+
+Iremos instalá-lo com o seguinte comando:
+
+```shell
+$ sudo apt install docker-compose
+```
+
+### 2.2 - Construindo a imagem
+
+Simplesmente rode o comando:
+
+```shell
+$ docker-compose build
+```
+
+A imagem será construída e ficará disponível com o nome `machadolhes/django_n2:latest`
+
+### 2.3 - Subindo o container
+
+Finalmente, para subir o container:
+
+```shell
+$ docker-compose up
+```
+
+A aplicação estará disponível em [`localhost:8000`](localhost:8000)
+
+---
+
 ## Como rodar esta aplicação localmente?
 
 > **Observação:** Este tutorial leva em consideração que o sistema operacional utilizado seja Linux
